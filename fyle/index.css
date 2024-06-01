@@ -1,0 +1,242 @@
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+.slide1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    @media screen and (max-width: 768px){
+    flex-wrap:wrap ;
+  }
+  }
+    
+.slide1 img{
+    width: 55%;
+    height: auto;
+    margin-left: 30px;
+    @media screen and (max-width: 768px){
+        display: none;
+      }
+}
+
+.slide1 .text-part1{
+    display: flex;
+    flex-direction: column;
+    margin: 110px;
+    text-align: left;
+    
+}
+.slide1 .text-part1 h3{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:35px ;
+    color: rgb(243, 96, 145);
+
+}
+.slide1 .text-part1 h1{
+    font-size:60px ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 10px 20px 20px 0px;
+}
+.slide1 .text-part1 h4{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:20px ;
+    font-weight: 100;
+    font-weight:100;
+    color: rgb(142, 141, 141);
+    
+}
+.slide1 .text-part1 button{
+    background-color: rgb(232, 51, 111);
+    color: #fff;
+    padding: 15px;
+    border: none;
+    margin: 55px 0px 20px 0px;
+    border-radius: 5px;
+    width: 200px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .slide1 .text-part1 button:hover {
+    background-color: rgb(194, 9, 9);
+  }
+
+
+
+ #mymodel{
+    position: fixed;
+    top: 0;
+    border: 0;
+    right: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0,0,0,0.6);
+    z-index: 100;
+    
+    justify-content: center;
+    align-items: center;
+    display: none;
+ } 
+ .modal {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 400px;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="email"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .checkbox-container input {
+    margin-right: 10px;
+  }
+  
+ button {
+    background-color: #f05050; 
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+  }
+  
+  .modal button:hover {
+    background-color: #d94646;
+  }
+  .close-modal{
+    cursor: pointer;
+  }
+  .slide2 {
+    width: 100;
+    justify-content: center;
+    align-items: center;
+    background-color: #efefefd6;
+}
+.slide2 .top{
+    display: flex;
+   width: 80vw;
+  justify-content: center;
+    align-items: center;
+    @media screen and (max-width: 768px){
+        flex-wrap:wrap ;
+      }
+}
+
+.slide2  h3{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size:35px ;
+    padding:  60px 40px 0px 110px;
+       color: rgb(243, 96, 145);
+
+}
+
+.slide2 .right-part {
+    margin: 20px 55px 40px 110px ;
+    width: 40%;
+}
+.slide2 .right-part h2 {
+    color: #333;
+    font-size:50px ;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: left;
+    
+}
+.slide2 .left-part  {
+    font-size: 20px;
+     align-items:end;
+    color: #333;
+    line-height: 1.5;
+    width: 50%;
+    
+}
+
+
+.card-wapper{
+    display: flex;
+    padding: 50px 122px;
+}
+
+
+.card {
+    --bg: #f7f7f8;
+    --hover-bg: #FFE5F4;
+    --hover-text: #E50087;
+    
+    margin: 0.5em;
+    width: calc(100%/4); 
+    text-align: center;
+    background: var(--bg);
+    border-radius: 5px;
+    position: relative;
+    overflow: hidden;
+    transition: .3s cubic-bezier(.6,.4,0,1),transform .15s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+  }
+  
+  .card__body {
+    color: #464853;
+       
+  }
+ .card .card-image {
+    max-width: 100%; 
+    max-height: 100%; 
+}
+ 
+  
+  .card span {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--hover-text);
+    border-radius: 5px;
+    font-weight: bold;
+    top: 100%;
+    transition: all .3s cubic-bezier(.6,.4,0,1);
+  }
+  
+  .card:hover span {
+    top: 0;
+    font-size: 1.2em;
+  }
+  
+  .card:hover {
+    background: var(--hover-bg);
+  }
+  
+  .card:hover>div {
+    opacity: 0;
+  }
