@@ -1,30 +1,26 @@
-function showLoginModal() {
-  const loginModal = document.getElementById('mymodel');
-  if (loginModal) {
-    loginModal.style.display = 'flex';
-    loginModal.style.opacity = 1; // Add opacity transition for fading effect
-  }
-}
+const mainImage = document.getElementById('mainImage');
 
-function closeLoginModal() {
-  const loginModal = document.getElementById('mymodel');
-  if (loginModal) {
-    loginModal.style.opacity = 0; // Add opacity transition for fading effect
-    loginModal.addEventListener('transitionend', () => {
-      loginModal.style.display = 'none';
+const buttons = document.querySelectorAll('.content-button1, .content-button2, .content-button3'); // Select all buttons with matching classes
+
+buttons.forEach((button) => {
+  button.addEventListener('click', () => {
+    // Update main image source based on button class
+    if (button.classList.contains('content-button1')) {
+      mainImage.src = "p2.png";
+    } else if (button.classList.contains('content-button2')) {
+      mainImage.src = "p3.png";
+    } else if (button.classList.contains('content-button3')) {
+      mainImage.src = "p4.png";
+    }
+
+    // Reset all button styles
+    buttons.forEach((otherButton) => {
+      otherButton.style.backgroundColor = '#e6ece6b5';
+      otherButton.style.color = 'black';
     });
-  }
-}
 
-// Call the functions when the DOM is loaded (similar to $(document).ready())
-document.addEventListener('DOMContentLoaded', () => {
-  const loginShowButton = document.getElementById('show');
-  if (loginShowButton) {
-    loginShowButton.addEventListener('click', showLoginModal);
-  }
-
-  const closeButtons = document.querySelectorAll('.close-modal');
-  closeButtons.forEach(closeButton => {
-    closeButton.addEventListener('click', closeLoginModal);
+    // Apply active styles to clicked button
+    button.style.backgroundColor = 'red';
+    button.style.color = 'white';
   });
 });
